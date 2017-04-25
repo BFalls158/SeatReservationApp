@@ -1,0 +1,59 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100%;
+}
+
+main {
+	text-align: center;
+	width: 75%;
+	margin: 0 auto;
+	background-color: green;
+}
+
+.seat {
+	width:13%;
+	height:100px;
+	background-color: blue;
+	display: inline-block;
+	margin: 1% 1%;
+}
+
+#seatGrid {
+	width: 100%;
+}
+
+#availableBox {
+	width: 5%;
+	height: 40px;
+	background-color: orange;
+	display: inline-block;
+}
+
+#available {
+	display: inline-block;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.legendItem {
+	width: 5%;
+	height: 40px;
+	margin: 1% 1%;
+	background-color: orange;
+	display: inline-block;
+}
+
+#screen {
+	height: 20px;
+	width:80%;
+	background-color: grey;
+	margin: 5px auto;
+}
+
+#instructions {
+	display: inline-block;
+}
