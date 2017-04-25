@@ -20,6 +20,7 @@ main {
 	background-color: blue;
 	display: inline-block;
 	margin: 1% 1%;
+	line-height: 100px;
 }
 
 #seatGrid {

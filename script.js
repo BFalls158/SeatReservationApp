@@ -3,3 +3,5 @@
 //	 TODO Submitting form needs change selected to reserved
 // 	 TODO On hover should make info appear on reserved seats
 //	 TODO 
+
+console.log($('.seat'));
