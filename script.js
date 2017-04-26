@@ -48,7 +48,7 @@ $(document).ready(function(){
 		});
 	}); //End of on-click handler for .seats
 
-	$("#myBtn").click(function(){
+	$("#modalLaunch").click(function(){
         $("#myModal").modal();
     });
 // seat iteration for later:

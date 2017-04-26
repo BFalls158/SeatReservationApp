@@ -93,3 +93,7 @@ main {
   height: 500px;
   background-color: purple;
 }
+
+.seat:hover {
+	background:rgba(0,0,0,0.5);
+}
