@@ -97,3 +97,8 @@ main {
 .seat:hover {
 	background:rgba(0,0,0,0.5);
 }
+
+#modalLaunch {
+	display: block;
+	margin: 5px auto;
+}
