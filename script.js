@@ -19,9 +19,17 @@ $(document).ready(function(){
 		if($(this).hasClass('available')){ 
 		// Tests to see if ele has 'available' class
 			$(this).addClass('selected').removeClass('available');
+			selectedSeats.push($(this).text());
+			console.log(selectedSeats);
 		} else if ($(this).hasClass('selected')){
 			$(this).addClass('available').removeClass('selected');
-		}
+			var ele = ($(this));
+			selectedSeats.forEach(function(seat, index){
+				if($(ele).text()==seat){
+					selectedSeats.splice(index, 1);
+				};
+			});
+		};
 		//swap selected/available classes
 
 		$('.seat').each(function(index, ele) {
@@ -46,11 +54,6 @@ $(document).ready(function(){
 
 	}); //end of doc.ready func
 
-	// $('.seat').each(function(index, ele) {
-	// 	if($(ele).hasClass('selected')) {
-	// 		$('form').attr('display', 'inline')
-	// 	}
-	// })
 // seat iteration for later:
 // $('.seat').each(function(index, ele){
 // 	console.log(ele.innerText);
