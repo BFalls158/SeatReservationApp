@@ -121,12 +121,14 @@ background-color: rgba(246, 189, 96, 0.6);
   background-color: purple;
 }
 
-
 #modalLaunch {
 	display: block;
 	margin: 5px auto;
 }
 
+.reserved {
+	background-color: red;
+}
 /*colors*/
 /*reserved = #CC1100*/
 /**/
