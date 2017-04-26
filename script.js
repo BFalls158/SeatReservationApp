@@ -33,23 +33,19 @@ $(document).ready(function(){
 	}); //End of on-click handler for .seats
 
 	//Click handler for form modal
-	$("#modalLaunch").click(function(){
+	$("#modalLaunch").on('click', function(){
 		var temp = "";
 		selectedSeats.forEach(function(item){
 			temp += item + " ";
 		});
 
 		$('#resList').text(temp);
-		
+			//updates selected seats in modal
         $("#myModal").modal('show');
+        	// shows modal
     });
 
-
-// seat iteration for later:
-// $('.seat').each(function(index, ele){
-// 	console.log(ele.innerText);
-// });
-
+	//onclick handler for submit button in modal
 	$('#submit').on('click', function() {
 
 		selectedSeats.forEach(function(item){
