@@ -34,6 +34,13 @@ $(document).ready(function(){
 
 	//Click handler for form modal
 	$("#modalLaunch").click(function(){
+		var temp = "";
+		selectedSeats.forEach(function(item){
+			temp += item + " ";
+		});
+
+		$('#resList').text(temp);
+		
         $("#myModal").modal('show');
     });
 
@@ -43,8 +50,8 @@ $(document).ready(function(){
 // 	console.log(ele.innerText);
 // });
 
-//	 TODO Submitting form needs change selected to reserved
-	$('#submit').on('click', function() { 
+	$('#submit').on('click', function() {
+
 		selectedSeats.forEach(function(item){
 			// seat, first, last, email, phone, loc | Constructs object for each reserved seat
 			reservedSeats.push(new Seat(item, $('#name').val(), $('#last').val(), $('#email').val(), $('#phone').val()));	
@@ -61,10 +68,11 @@ $(document).ready(function(){
 		});
 
 		$("#myModal").modal('hide');
-		console.log(reservedSeats);
+		// show other modal, dismiss modal on click
 	});
 // 	 TODO On hover should make info appear on reserved seats
 
+	
 
 
 
