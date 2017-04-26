@@ -1,13 +1,12 @@
 $(document).ready(function(){
 //Build object for each sumbited reservation
 // added .reserved in case we need it to determine if a seat is taken
-	var Seat = function(seat, first, last, email, phone, loc) {
+	var Seat = function(seat, first, last, email, phone) {
 		this.seat = seat;
 		this.firstName = first;
 		this.lastName = last;
 		this.email = email;
 		this.phone = phone;
-		this.location = loc;
 		this.reserved = true;
 	};
 
@@ -22,7 +21,7 @@ $(document).ready(function(){
 			selectedSeats.push($(this).text());
 		} else if ($(this).hasClass('selected')){
 			$(this).addClass('available').removeClass('selected');
-			var ele = ($(this)); // assigned as variable because this doesn't working inside the forEach loop
+			var ele = ($(this)); // assigned as variable because this doesn't work inside the forEach loop
 			selectedSeats.forEach(function(seat, index){
 				if($(ele).text() === seat){
 					selectedSeats.splice(index, 1);
@@ -32,16 +31,38 @@ $(document).ready(function(){
 		};
 		//swap selected/available classes
 	}); //End of on-click handler for .seats
-	//Click handler for form
+
+	//Click handler for form modal
 	$("#modalLaunch").click(function(){
-        $("#myModal").modal();
+        $("#myModal").modal('show');
     });
+
+
 // seat iteration for later:
 // $('.seat').each(function(index, ele){
 // 	console.log(ele.innerText);
 // });
 
 //	 TODO Submitting form needs change selected to reserved
+	$('#submit').on('click', function() { 
+		selectedSeats.forEach(function(item){
+			// seat, first, last, email, phone, loc | Constructs object for each reserved seat
+			reservedSeats.push(new Seat(item, $('#name').val(), $('#last').val(), $('#email').val(), $('#phone').val()));	
+		});
+
+		
+		$('.seat').each(function(index, ele) {
+			reservedSeats.forEach(function(reserved){
+				if (ele.innerText === reserved.seat){
+					$(ele).addClass('reserved').removeClass('selected');
+				}
+			});
+			selectedSeats = [];
+		});
+
+		$("#myModal").modal('hide');
+		console.log(reservedSeats);
+	});
 // 	 TODO On hover should make info appear on reserved seats
 
 

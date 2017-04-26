@@ -108,8 +108,8 @@ h1 {
   background-color: purple;
 }
 
-.seat:hover {
-	background:rgba(0,0,0,0.5);
+.seat.available:hover {
+	background:rgba(255,255,255,0.5);
 }
 
 #modalLaunch {
@@ -117,6 +117,9 @@ h1 {
 	margin: 5px auto;
 }
 
+.reserved {
+	background-color: red;
+}
 /*colors*/
 /*reserved = #CC1100*/
 /**/
