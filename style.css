@@ -63,3 +63,15 @@ main {
 /*Grid styling/alignment*/
 /*background image/color that works*/
 /*legend alignment*/
+
+form {
+	display: none;
+}
+
+.available {
+	background-color: white; 
+}
+
+.selected {
+	background-color: orange;
+}
