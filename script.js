@@ -48,29 +48,37 @@ $(document).ready(function(){
 
 	//onclick handler for submit button in modal
 	$('#submit').on('click', function() {
-
-		selectedSeats.forEach(function(item){
-			// seat, first, last, email, phone, loc | Constructs object for each reserved seat
-			reservedSeats.push(new Seat(item, $('#name').val(), $('#last').val(), $('#email').val(), $('#phone').val()));	
-		});
-
-		
-		$('.seat').each(function(index, ele) {
-			reservedSeats.forEach(function(reserved){
-				if (ele.innerText === reserved.seat){
-					$(ele).addClass('reserved').removeClass('selected');
-					$(ele).attr('data-toggle', 'tooltip');
-					$(ele).attr('data-html', 'true');
-					$(ele).tooltip({
-						title: reserved.firstName + '<br>' + reserved.lastName + '<br>' + reserved.email + '<br>' + reserved.phone
-					});
-				};
+		// Handles form confirmation
+		if($('#name').val() === "" || $('#last').val() === "" || $('#email').val() === "" || $('#phone').val() === "") {
+			$('#error').text('Please complete all fields.');
+		} else {
+			selectedSeats.forEach(function(item){
+				// seat, first, last, email, phone, loc | Constructs object for each reserved seat
+				reservedSeats.push(new Seat(item, $('#name').val(), $('#last').val(), $('#email').val(), $('#phone').val()));	
 			});
-			selectedSeats = [];
-		});
 
-		$("#myModal").modal('hide');
-		$("#modal2").modal('show');
+			
+			$('.seat').each(function(index, ele) {
+				reservedSeats.forEach(function(reserved){
+					if (ele.innerText === reserved.seat){
+						$(ele).addClass('reserved').removeClass('selected');
+						$(ele).attr('data-toggle', 'tooltip');
+						$(ele).attr('data-html', 'true');
+						$(ele).tooltip({
+							title: reserved.firstName + '<br>' + reserved.lastName + '<br>' + reserved.email + '<br>' + reserved.phone
+						});
+					};
+				});
+				selectedSeats = [];
+				$('#name').val(''); 
+				$('#last').val('');
+				$('#email').val(''); 
+				$('#phone').val('');
+			});
+		
+			$("#myModal").modal('hide');
+			$("#modal2").modal('show');
+		}
 		// show other modal, dismiss modal on click
 	});
 // 	 TODO On hover should make info appear on reserved seats
