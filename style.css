@@ -74,10 +74,6 @@ main {
 /*background image/color that works*/
 /*legend alignment*/
 
-form {
-	display: none;
-}
-
 .available {
 	background-color: white;
 }
