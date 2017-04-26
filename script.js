@@ -31,10 +31,6 @@ $(document).ready(function(){
 			});
 		};
 		//swap selected/available classes
-
-
-
-	
 	}); //End of on-click handler for .seats
 	//Click handler for form
 	$("#modalLaunch").click(function(){
@@ -58,11 +54,13 @@ $(document).ready(function(){
 
 
 
+// var temp = "";
 
+// selectedSeats.forEach(function(item){
+// 	temp += item + " ";
+// });
 
-
-
-
+// console.log(temp);
 
 
 
