@@ -31,24 +31,9 @@ $(document).ready(function(){
 			});
 		};
 		//swap selected/available classes
-
-		$('.seat').each(function(index, ele) {
-			if($(ele).hasClass('selected')) {
-				//checks to see if any elements are selected so it knows to show form
-				$('form').css('display', 'inline');
-				console.log('logic!');
-				return false;
-				//shows the form, returns false to break loop so that 
-				//else doesn't run unless all elements iterated through and don't exist.
-			} else {
-				//Hides form if nothing selected
-				$('form').css('display', 'none');
-			}
-
-		});
 	}); //End of on-click handler for .seats
-
-	$("#myBtn").click(function(){
+	//Click handler for form
+	$("#modalLaunch").click(function(){
         $("#myModal").modal();
     });
 // seat iteration for later:
@@ -69,11 +54,13 @@ $(document).ready(function(){
 
 
 
+// var temp = "";
 
+// selectedSeats.forEach(function(item){
+// 	temp += item + " ";
+// });
 
-
-
-
+// console.log(temp);
 
 
 
@@ -84,3 +71,17 @@ $(document).ready(function(){
 
 
 });//end of doc.ready func
+
+		// $('.seat').each(function(index, ele) {
+		// 	if($(ele).hasClass('selected')) {
+		// 		//checks to see if any elements are selected so it knows to show form
+		// 		$('form').css('display', 'inline');
+		// 		console.log('logic!');
+		// 		return false;
+		// 		//shows the form, returns false to break loop so that 
+		// 		//else doesn't run unless all elements iterated through and don't exist.
+		// 	} else {
+		// 		//Hides form if nothing selected
+		// 		$('form').css('display', 'none');
+		// 	}
+		//	});

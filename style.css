@@ -24,6 +24,11 @@ main {
 	margin: 0 auto;
 	background: rgba(255,255,255,0.0);
 }
+
+h1 {
+	color: #CCCCBB !important;
+	 -webkit-text-stroke: 1px black;
+}
 /*Need classes for .reserved / .selected / .available*/
 .seat {
 	width:15%;
@@ -33,6 +38,13 @@ main {
   border: 2px solid black;
 }
 
+#legend {
+	display: inline-block;
+}
+
+#legend p{
+	background: rgba(255, 255, 255, 0.6);
+}
 #seatGrid {
   width: 75%;
   height: 60%;
@@ -73,6 +85,8 @@ main {
 
 #instructions {
 	display: inline-block;
+	background: rgba(255, 255, 255, 0.6);
+
 }
 
 /*Form Styling*/
@@ -87,7 +101,28 @@ background-color: rgba(52, 73, 94,1.0);
 .selected {
 	background-color: orange;
 }
+<<<<<<< HEAD
 .seat:hover {
   opacity: 0.5;
 
 }
+=======
+.test {
+  width: 100px;
+  height: 500px;
+  background-color: purple;
+}
+
+.seat:hover {
+	background:rgba(0,0,0,0.5);
+}
+
+#modalLaunch {
+	display: block;
+	margin: 5px auto;
+}
+
+/*colors*/
+/*reserved = #CC1100*/
+/**/
+>>>>>>> 4cfa444e6db9fa9e467a67b899ca7e040f6043e7
