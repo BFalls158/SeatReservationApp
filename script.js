@@ -7,11 +7,12 @@ $(document).ready(function(){
 		this.lastName = last;
 		this.email = email;
 		this.phone = phone;
-		this.reserved = true;
 	};
 
 	var reservedSeats = []; //working array for reserved seats
 	var selectedSeats = []; //working array for selected items
+
+	$('[data-toggle="tooltip"]').tooltip(); //because documentation 
 
 	$('.seat').on('click', function(e){ 
 	//whenever an seat is clicked on, pass the event and do stuff.
@@ -58,12 +59,18 @@ $(document).ready(function(){
 			reservedSeats.forEach(function(reserved){
 				if (ele.innerText === reserved.seat){
 					$(ele).addClass('reserved').removeClass('selected');
-				}
+					$(ele).attr('data-toggle', 'tooltip');
+					$(ele).attr('data-html', 'true');
+					$(ele).tooltip({
+						title: reserved.firstName + '<br>' + reserved.lastName + '<br>' + reserved.email + '<br>' + reserved.phone
+					});
+				};
 			});
 			selectedSeats = [];
 		});
 
 		$("#myModal").modal('hide');
+		$("#modal2").modal('show');
 		// show other modal, dismiss modal on click
 	});
 // 	 TODO On hover should make info appear on reserved seats
