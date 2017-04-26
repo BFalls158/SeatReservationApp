@@ -13,7 +13,9 @@
 
 		<div id="legend">
 			<p><span class="glyphicon glyphicon-stop" style="color:white"></span> - Available <span class="glyphicon glyphicon-stop" style="color:red"></span> - Reserved <span class="glyphicon glyphicon-stop" style="color:orange"></span> - Selected</p>
-
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  Reserve your seats
+</button>
 
 		</div>
 			<p id="instructions">Select your seat available(s) below and click sumbit to reserve your seat available(s)!</p>
@@ -50,16 +52,31 @@
 				<div class="seat available">D6</div>
 			</div>
 
-			<form>
-				<input type="text" name="firstName" id="firstName" placeholder="First Name" />
-				<input type="text" name="lastName" id="lastName" placeholder="Last Name"/>
-				<input type="email" name="email" id="email" placeholder="E-mail">
-				<input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" />
-				<button type="button" id="button" name="button">Sumbit</button>
-			</form>
+
 		</div>
 
-	<main>
+	</main>
+	<div class="modal fade">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
