@@ -108,11 +108,11 @@ background-color: #545775;
   background-color: #A40E4C;
 }
 .seat.available:hover {
-  opacity: 0.6;
+  background-color: rgba(84, 87, 117, 0.6);
 
 }
 .seat.selected:hover {
-  opacity: 0.6;
+background-color: rgba(246, 189, 96, 0.6);
 
 }
 .test {
