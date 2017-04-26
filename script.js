@@ -9,7 +9,7 @@ $(document).ready(function(){
 		this.phone = phone;
 		this.location = loc;
 		this.reserved = true;
-	}
+	};
 
 	var reservedSeats = []; //working array for reserved seats
 	var selectedSeats = []; //working array for selected items
@@ -23,36 +23,30 @@ $(document).ready(function(){
 			console.log(selectedSeats);
 		} else if ($(this).hasClass('selected')){
 			$(this).addClass('available').removeClass('selected');
-			var ele = ($(this));
+			var ele = ($(this)); // assigned as variable because this doesn't working inside the forEach loop
 			selectedSeats.forEach(function(seat, index){
-				if($(ele).text()==seat){
+				if($(ele).text() === seat){
 					selectedSeats.splice(index, 1);
+					//removes elements as they are unselected, from the array
 				};
 			});
 		};
 		//swap selected/available classes
 
 		$('.seat').each(function(index, ele) {
-		if($(ele).hasClass('selected')) {
-			//checks to see if any elements are selected so it knows to show form
-			$('form').css('display', 'inline');
-			return false;
-			//shows the form, returns false to break loop so that 
-			//else doesn't run unless all elements iterated through and don't exist.
-		} else {
-			//Hides form if nothing selected
-			$('form').css('display', 'none');
-		}
+			if($(ele).hasClass('selected')) {
+				//checks to see if any elements are selected so it knows to show form
+				$('form').css('display', 'inline');
+				return false;
+				//shows the form, returns false to break loop so that 
+				//else doesn't run unless all elements iterated through and don't exist.
+			} else {
+				//Hides form if nothing selected
+				$('form').css('display', 'none');
+			}
 
-	});
-
-
-
-
-
-
-
-	}); //end of doc.ready func
+		});
+	}); //End of on-click handler for .seats
 
 // seat iteration for later:
 // $('.seat').each(function(index, ele){
@@ -86,4 +80,4 @@ $(document).ready(function(){
 
 
 
-});
+});//end of doc.ready func
