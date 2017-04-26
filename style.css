@@ -36,6 +36,7 @@ h1 {
 	display: inline-block;
 	line-height: 100px;
   border: 2px solid black;
+  border-radius: 5%
 }
 
 #legend {
@@ -81,6 +82,8 @@ h1 {
 	width:80%;
 	background-color: grey;
 	margin: 5px auto;
+  margin-bottom: 3%;
+  border-radius: 3px;
 }
 
 #instructions {
@@ -95,27 +98,29 @@ h1 {
 /*legend alignment*/
 
 .available {
-background-color: rgba(52, 73, 94,1.0);
+background-color: #545775;
 }
 
 .selected {
-	background-color: orange;
+	background-color: #F6BD60;
 }
-<<<<<<< HEAD
-.seat:hover {
-  opacity: 0.5;
+.reserved {
+  background-color: #A40E4C;
+}
+.seat.available:hover {
+  opacity: 0.6;
 
 }
-=======
+.seat.selected:hover {
+  opacity: 0.6;
+
+}
 .test {
   width: 100px;
   height: 500px;
   background-color: purple;
 }
 
-.seat:hover {
-	background:rgba(0,0,0,0.5);
-}
 
 #modalLaunch {
 	display: block;
@@ -125,4 +130,3 @@ background-color: rgba(52, 73, 94,1.0);
 /*colors*/
 /*reserved = #CC1100*/
 /**/
->>>>>>> 4cfa444e6db9fa9e467a67b899ca7e040f6043e7
