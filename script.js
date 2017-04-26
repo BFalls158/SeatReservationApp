@@ -20,7 +20,6 @@ $(document).ready(function(){
 		// Tests to see if ele has 'available' class
 			$(this).addClass('selected').removeClass('available');
 			selectedSeats.push($(this).text());
-			console.log(selectedSeats);
 		} else if ($(this).hasClass('selected')){
 			$(this).addClass('available').removeClass('selected');
 			var ele = ($(this)); // assigned as variable because this doesn't working inside the forEach loop
@@ -37,6 +36,7 @@ $(document).ready(function(){
 			if($(ele).hasClass('selected')) {
 				//checks to see if any elements are selected so it knows to show form
 				$('form').css('display', 'inline');
+				console.log('logic!');
 				return false;
 				//shows the form, returns false to break loop so that 
 				//else doesn't run unless all elements iterated through and don't exist.

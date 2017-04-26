@@ -27,13 +27,14 @@ main {
 }
 
 #seatGrid {
-	width: 75%;
+  width: 80%;
   height: 50%;
-  position: absolute;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   background-color: red;
   justify-content: space-around;
+  margin: 5px auto;
 }
 
 #availableBox {
