@@ -33,10 +33,10 @@ h1 {
 .seat {
 	width:15%;
 	height:21%;
-	background-color: blue;
 	display: inline-block;
 	line-height: 100px;
   border: 2px solid black;
+  border-radius: 5%
 }
 
 #legend {
@@ -82,6 +82,8 @@ h1 {
 	width:80%;
 	background-color: grey;
 	margin: 5px auto;
+  margin-bottom: 3%;
+  border-radius: 3px;
 }
 
 #instructions {
@@ -96,20 +98,27 @@ h1 {
 /*legend alignment*/
 
 .available {
-	background-color: white;
+background-color: #545775;
 }
 
 .selected {
-	background-color: orange;
+	background-color: #F6BD60;
+}
+.reserved {
+  background-color: #A40E4C;
+}
+.seat.available:hover {
+  opacity: 0.6;
+
+}
+.seat.selected:hover {
+  opacity: 0.6;
+
 }
 .test {
   width: 100px;
   height: 500px;
   background-color: purple;
-}
-
-.seat.available:hover {
-	background:rgba(255,255,255,0.5);
 }
 
 #modalLaunch {

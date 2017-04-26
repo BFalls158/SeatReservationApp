@@ -12,14 +12,15 @@
 		<h1>header of stuff</h1>
 
 		<div id="legend">
-			<p><span class="glyphicon glyphicon-stop" style="color:white"></span> - Available <span class="glyphicon glyphicon-stop" style="color:red"></span> - Reserved <span class="glyphicon glyphicon-stop" style="color:orange"></span> - Selected</p>
+			<p><span class="glyphicon glyphicon-stop" style="color:#545775"></span> - Available <span class="glyphicon glyphicon-stop" style="color:#A40E4C"></span> - Reserved <span class="glyphicon glyphicon-stop" style="color:#F6BD60"></span> - Selected</p>
+
 
 		</div>
 		<div id="instructionDiv">
 			<p id="instructions">Select your seat available(s) below and click sumbit to reserve your seat available(s)!</p>
 		</div>
 			<button type="button" class="btn btn-default btn-lg" id="modalLaunch">Reserve Seat</button>
-		
+
 		<div id="screen">
 			Screen
 		</div>
@@ -49,12 +50,38 @@
 				<div class="seat available">D4</div>
 				<div class="seat available">D5</div>
 				<div class="seat available">D6</div>
+			</div>
+
+
+		</div>
+
+	</main>
+	<div class="modal fade">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 		</div>
 
 			  <!-- Modal -->
 	    <div class="modal fade" id="myModal" role="dialog">
 		    <div class="modal-dialog">
-		    
+
 		      <!-- Modal content-->
 		       <div class="modal-content">
 		        	<div class="modal-header" style="padding:35px 50px;">
@@ -88,7 +115,7 @@
 			        </div>
 		      	</div>
 		    </div>
-		</div> 
+		</div>
 	</main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
