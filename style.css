@@ -24,6 +24,11 @@ main {
 	margin: 0 auto;
 	background: rgba(255,255,255,0.0);
 }
+
+h1 {
+	color: #CCCCBB !important;
+	 -webkit-text-stroke: 1px black;
+}
 /*Need classes for .reserved / .selected / .available*/
 .seat {
 	width:15%;
@@ -34,6 +39,13 @@ main {
   border: 2px solid black;
 }
 
+#legend {
+	display: inline-block;
+}
+
+#legend p{
+	background: rgba(255, 255, 255, 0.6);
+}
 #seatGrid {
   width: 75%;
   height: 60%;
@@ -74,6 +86,8 @@ main {
 
 #instructions {
 	display: inline-block;
+	background: rgba(255, 255, 255, 0.6);
+
 }
 
 /*Form Styling*/
@@ -102,3 +116,7 @@ main {
 	display: block;
 	margin: 5px auto;
 }
+
+/*colors*/
+/*reserved = #CC1100*/
+/**/
