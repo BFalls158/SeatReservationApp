@@ -48,6 +48,9 @@ $(document).ready(function(){
 		});
 	}); //End of on-click handler for .seats
 
+	$("#myBtn").click(function(){
+        $("#myModal").modal();
+    });
 // seat iteration for later:
 // $('.seat').each(function(index, ele){
 // 	console.log(ele.innerText);

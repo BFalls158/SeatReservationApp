@@ -6,15 +6,23 @@ html, body {
 	padding: 0;
 }
 
-body {
+html{
 	height: 100%;
+	background-image: url('movieBackground.jpg') ;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: fixed;
+}
+
+body {
+	background: rgba(0,0,0,0) !important;
 }
 
 main {
 	text-align: center;
 	width: 75%;
 	margin: 0 auto;
-	background-color: green;
+	background: rgba(255,255,255,0.0);
 }
 /*Need classes for .reserved / .selected / .available*/
 .seat {
@@ -26,12 +34,11 @@ main {
 }
 
 #seatGrid {
-	width: 75%;
-  height: 50%;
+  width: 75%;
+  height: 60%;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
-  background-color: red;
   justify-content: space-around;
 }
 
@@ -72,10 +79,6 @@ main {
 /*Grid styling/alignment*/
 /*background image/color that works*/
 /*legend alignment*/
-
-form {
-	display: none;
-}
 
 .available {
 background-color: rgba(52, 73, 94,1.0);
