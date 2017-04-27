@@ -152,3 +152,7 @@ header {
   margin: 0 auto;
   border-radius: 3px;
 }
+#selectPls {
+  display: none;
+  margin: 0;
+}

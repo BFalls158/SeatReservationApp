@@ -12,11 +12,11 @@ $(document).ready(function(){
 	var reservedSeats = []; //working array for reserved seats
 	var selectedSeats = []; //working array for selected items
 
-	$('[data-toggle="tooltip"]').tooltip(); //because documentation 
+	$('[data-toggle="tooltip"]').tooltip(); //because documentation
 
-	$('.seat').on('click', function(e){ 
+	$('.seat').on('click', function(e){
 	//whenever an seat is clicked on, pass the event and do stuff.
-		if($(this).hasClass('available')){ 
+		if($(this).hasClass('available')){
 		// Tests to see if ele has 'available' class
 			$(this).addClass('selected').removeClass('available');
 			selectedSeats.push($(this).text());
@@ -35,15 +35,22 @@ $(document).ready(function(){
 
 	//Click handler for form modal
 	$("#modalLaunch").on('click', function(){
-		var temp = "";
-		selectedSeats.forEach(function(item){
-			temp += item + " ";
-		});
+			if(selectedSeats.length === 0){
+				$('#selectPls').css('display', 'block');
+			}
+			else {
+						$('#selectPls').css('display', 'none');
+						var temp = "";
+						selectedSeats.forEach(function(item){
+							temp += item + " ";
+						});
 
-		$('#resList').text(temp);
-			//updates selected seats in modal
-        $("#myModal").modal('show');
-        	// shows modal
+						$('#resList').text(temp);
+							//updates selected seats in modal
+				        $("#myModal").modal('show');
+				        	// shows modal
+				};
+
     });
 
 	//onclick handler for submit button in modal
@@ -54,10 +61,10 @@ $(document).ready(function(){
 		} else {
 			selectedSeats.forEach(function(item){
 				// seat, first, last, email, phone, loc | Constructs object for each reserved seat
-				reservedSeats.push(new Seat(item, $('#name').val(), $('#last').val(), $('#email').val(), $('#phone').val()));	
+				reservedSeats.push(new Seat(item, $('#name').val(), $('#last').val(), $('#email').val(), $('#phone').val()));
 			});
 
-			
+
 			$('.seat').each(function(index, ele) {
 				reservedSeats.forEach(function(reserved){
 					if (ele.innerText === reserved.seat){
@@ -72,12 +79,12 @@ $(document).ready(function(){
 				//clear selected array
 				selectedSeats = [];
 				//clear form data
-				$('#name').val(''); 
+				$('#name').val('');
 				$('#last').val('');
-				$('#email').val(''); 
+				$('#email').val('');
 				$('#phone').val('');
 			});
-		
+
 			$("#myModal").modal('hide');
 			$("#modal2").modal('show');
 		}
