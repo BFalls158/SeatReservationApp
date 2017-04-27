@@ -8,7 +8,7 @@ html, body {
 
 html{
 	height: 100%;
-	background-image: url('movieBackground.jpg') ;
+	background-image: url('movieBackground0.75.png') ;
 	background-size:cover;
 	background-repeat: no-repeat;
 	background-position: fixed;
@@ -43,9 +43,9 @@ h1 {
 	display: inline-block;
 }
 
-#legend p{
-	background: rgba(255, 255, 255, 0.6);
-}
+/*#legend p{
+	background: rgba(255, 255, 255, 0.1);
+}*/
 #seatGrid {
   width: 75%;
   height: 60%;
@@ -81,14 +81,14 @@ h1 {
 	height: 20px;
 	width:80%;
 	background-color: grey;
-	margin: 5px auto;
+	margin: 3% auto;
   margin-bottom: 3%;
   border-radius: 3px;
 }
 
 #instructions {
 	display: inline-block;
-	background: rgba(255, 255, 255, 0.6);
+	/*background: rgba(255, 255, 255, 0.6);*/
 
 }
 
@@ -132,3 +132,7 @@ background-color: rgba(246, 189, 96, 0.6);
 /*colors*/
 /*reserved = #CC1100*/
 /**/
+#legend p, #instructions {
+font-size: 18px;
+font-weight: bold;
+}

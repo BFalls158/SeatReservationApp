@@ -9,7 +9,9 @@
 </head>
 <body>
 	<main>
-		<h1>header of stuff</h1>
+		<h1>jQuery Theatre</h1>
+
+		<button type="button" class="btn btn-default btn-lg" id="modalLaunch">Reserve Seat</button>
 
 		<div id="legend">
 			<p><span class="glyphicon glyphicon-stop" style="color:#545775"></span> - Available <span class="glyphicon glyphicon-stop" style="color:#A40E4C"></span> - Reserved <span class="glyphicon glyphicon-stop" style="color:#F6BD60"></span> - Selected</p>
@@ -19,7 +21,7 @@
 		<div id="instructionDiv">
 			<p id="instructions">Select your seat available(s) below and click sumbit to reserve your seat available(s)!</p>
 		</div>
-			<button type="button" class="btn btn-default btn-lg" id="modalLaunch">Reserve Seat</button>
+
 
 		<div id="screen">
 			Screen
@@ -98,12 +100,7 @@
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <h5 class="modal-title">Your seats have been reserved!</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 		      </div>
 		    </div>
 		  </div>
