@@ -1,5 +1,5 @@
 * {
-  font-family: 'Lato', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 html, body {
 	margin: 0;
@@ -35,9 +35,11 @@ h1 {
 	height:21%;
 	display: inline-block;
 	line-height: 100px;
-  border: 2px solid black;
-  border-radius: 5%;
-  font-weight: bold;
+	border: 2px solid black;
+	border-radius: 5%;
+	font-weight: bold;
+	color: white;
+
 }
 
 #legend {
@@ -48,12 +50,12 @@ h1 {
 	background: rgba(255, 255, 255, 0.1);
 }*/
 #seatGrid {
-  width: 75%;
-  height: 60%;
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+	width: 75%;
+	height: 60%;
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 #availableBox {
@@ -102,27 +104,28 @@ h1 {
 /*legend alignment*/
 
 .available {
-background-color: #545775;
+	background-color: #545775;
 }
 
 .selected {
 	background-color: #F6BD60;
 }
 .reserved {
-  background-color: #A40E4C;
+	background-color: #A40E4C;
+	border: none;
 }
 .seat.available:hover {
-  background-color: rgba(84, 87, 117, 0.6);
+	background-color: rgba(84, 87, 117, 0.6);
 
 }
 .seat.selected:hover {
-background-color: rgba(246, 189, 96, 0.6);
+	background-color: rgba(246, 189, 96, 0.6);
 
 }
 .test {
-  width: 100px;
-  height: 500px;
-  background-color: purple;
+	width: 100px;
+	height: 500px;
+	background-color: purple;
 }
 
 #modalLaunch {
@@ -134,12 +137,10 @@ background-color: rgba(246, 189, 96, 0.6);
 .reserved {
 	background-color: red;
 }
-/*colors*/
-/*reserved = #CC1100*/
-/**/
+
 #legend p, #instructions {
-font-size: 18px;
-font-weight: bold;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 .error {
@@ -147,12 +148,12 @@ font-weight: bold;
 	font-weight: bold;
 }
 header {
-  background: rgba(255, 255, 255, 0.4);
-  width: 60%;
-  margin: 0 auto;
-  border-radius: 3px;
+	background: rgba(255, 255, 255, 0.4);
+	width: 60%;
+	margin: 0 auto;
+	border-radius: 3px;
 }
 #selectPls {
-  display: none;
-  margin: 0;
+	display: none;
+	margin: 0;
 }
