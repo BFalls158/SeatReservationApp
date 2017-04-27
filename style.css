@@ -78,12 +78,11 @@ h1 {
 }
 
 #screen {
-	height: 20px;
+	height: 25px;
 	width:80%;
 	background-color: grey;
 	margin: 3% auto;
-  margin-bottom: 3%;
-  border-radius: 3px;
+  	border-radius: 3px;
 }
 
 #instructions {
@@ -92,6 +91,10 @@ h1 {
 
 }
 
+#screen p {
+	font-size: 18px;
+	line-height: 25px;
+}
 /*Form Styling*/
 /*Grid styling/alignment*/
 /*background image/color that works*/
@@ -124,6 +127,7 @@ background-color: rgba(246, 189, 96, 0.6);
 #modalLaunch {
 	display: block;
 	margin: 5px auto;
+	font-family: 'Lato', sans-serif;
 }
 
 .reserved {
@@ -135,4 +139,9 @@ background-color: rgba(246, 189, 96, 0.6);
 #legend p, #instructions {
 font-size: 18px;
 font-weight: bold;
+}
+
+.error {
+	color: red;
+	font-weight: bold;
 }

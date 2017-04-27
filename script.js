@@ -50,7 +50,7 @@ $(document).ready(function(){
 	$('#submit').on('click', function() {
 		// Handles form confirmation
 		if($('#name').val() === "" || $('#last').val() === "" || $('#email').val() === "" || $('#phone').val() === "") {
-			$('#error').text('Please complete all fields.');
+			$('#error').text('Please complete all fields.').addClass('error');
 		} else {
 			selectedSeats.forEach(function(item){
 				// seat, first, last, email, phone, loc | Constructs object for each reserved seat
@@ -69,7 +69,9 @@ $(document).ready(function(){
 						});
 					};
 				});
+				//clear selected array
 				selectedSeats = [];
+				//clear form data
 				$('#name').val(''); 
 				$('#last').val('');
 				$('#email').val(''); 
@@ -81,47 +83,4 @@ $(document).ready(function(){
 		}
 		// show other modal, dismiss modal on click
 	});
-// 	 TODO On hover should make info appear on reserved seats
-
-	
-
-
-
-
-
-
-
-
-
-
-// var temp = "";
-
-// selectedSeats.forEach(function(item){
-// 	temp += item + " ";
-// });
-
-// console.log(temp);
-
-
-
-
-
-
-
-
-
 });//end of doc.ready func
-
-		// $('.seat').each(function(index, ele) {
-		// 	if($(ele).hasClass('selected')) {
-		// 		//checks to see if any elements are selected so it knows to show form
-		// 		$('form').css('display', 'inline');
-		// 		console.log('logic!');
-		// 		return false;
-		// 		//shows the form, returns false to break loop so that 
-		// 		//else doesn't run unless all elements iterated through and don't exist.
-		// 	} else {
-		// 		//Hides form if nothing selected
-		// 		$('form').css('display', 'none');
-		// 	}
-		//	});

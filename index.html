@@ -11,20 +11,20 @@
 	<main>
 		<h1>jQuery Theatre</h1>
 
-		<button type="button" class="btn btn-default btn-lg" id="modalLaunch">Reserve Seat</button>
+		<button type="button" class="btn btn-default btn-md" id="modalLaunch">Reserve Seat(s)</button>
 
 		<div id="legend">
-			<p><span class="glyphicon glyphicon-stop" style="color:#545775"></span> - Available <span class="glyphicon glyphicon-stop" style="color:#A40E4C"></span> - Reserved <span class="glyphicon glyphicon-stop" style="color:#F6BD60"></span> - Selected</p>
+			<p><span class="glyphicon glyphicon-stop" style="color:#545775"></span> - Available <span class="glyphicon glyphicon-stop" style="color:red"></span> - Reserved <span class="glyphicon glyphicon-stop" style="color:#F6BD60"></span> - Selected</p>
 
 
 		</div>
 		<div id="instructionDiv">
-			<p id="instructions">Select your seat available(s) below and click sumbit to reserve your seat available(s)!</p>
+			<p id="instructions">Select your seat available(s) below and click Reserve Seats to reserve your seat(s)!</p>
 		</div>
 
 
 		<div id="screen">
-			Screen
+			<p>Screen</p>
 		</div>
 
 		<div id="seatGrid">
@@ -96,12 +96,12 @@
 		    </div>
 		</div>
 <!-- modal #2 -->
-		<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <h5 class="modal-title">Your seats have been reserved!</h5>
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-secondary pull-right" data-dismiss="modal">Close</button>
 		      </div>
 		    </div>
 		  </div>
