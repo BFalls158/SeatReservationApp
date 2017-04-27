@@ -9,7 +9,7 @@ html, body {
 html{
 	height: 100%;
 	background-image: url('movieBackground0.75.png') ;
-	background-size:cover;
+	background-size:cover cover;
 	background-repeat: no-repeat;
 	background-position: fixed;
 }
@@ -28,17 +28,19 @@ main {
 h1 {
 	color: #9F7251 !important;
 	 -webkit-text-stroke: 1px black;
+     /*font-size: 50px !important;*/
 }
 /*Need classes for .reserved / .selected / .available*/
 .seat {
 	width:15%;
 	height:21%;
 	display: inline-block;
-	line-height: 100px;
 	border: 2px solid black;
 	border-radius: 5%;
 	font-weight: bold;
 	color: white;
+    line-height: 100px;
+
 
 }
 
@@ -58,13 +60,6 @@ h1 {
 	justify-content: space-around;
 }
 
-#availableBox {
-	width: 5%;
-	height: 40px;
-	background-color: orange;
-	display: inline-block;
-}
-
 
 #available {
 	display: inline-block;
@@ -72,13 +67,6 @@ h1 {
 	margin-bottom: auto;
 }
 
-.legendItem {
-	width: 5%;
-	height: 40px;
-	margin: 1% 1%;
-	background-color: orange;
-	display: inline-block;
-}
 
 #screen {
 	height: 25px;
@@ -148,7 +136,7 @@ h1 {
 	font-weight: bold;
 }
 header {
-	background: rgba(255, 255, 255, 0.4);
+	background: rgba(255, 255, 255, 0.6);
 	width: 60%;
 	margin: 0 auto;
 	border-radius: 3px;
