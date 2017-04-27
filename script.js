@@ -1,6 +1,5 @@
 $(document).ready(function(){
 //Build object for each sumbited reservation
-// added .reserved in case we need it to determine if a seat is taken
 	var Seat = function(seat, first, last, email, phone) {
 		this.seat = seat;
 		this.firstName = first;
@@ -12,17 +11,18 @@ $(document).ready(function(){
 	var reservedSeats = []; //working array for reserved seats
 	var selectedSeats = []; //working array for selected items
 
-	$('[data-toggle="tooltip"]').tooltip(); //because documentation
+	$('[data-toggle="tooltip"]').tooltip(); //initalize the use of tooltips
 
 	$('.seat').on('click', function(e){
-	//whenever an seat is clicked on, pass the event and do stuff.
+	//whenever a seat is clicked on, pass the event and do stuff.
 		if($(this).hasClass('available')){
 		// Tests to see if ele has 'available' class
 			$(this).addClass('selected').removeClass('available');
 			selectedSeats.push($(this).text());
+			//if the clicked on seat is available, set to class 'selected' and push to selectedSeats array
 		} else if ($(this).hasClass('selected')){
 			$(this).addClass('available').removeClass('selected');
-			var ele = ($(this)); // assigned as variable because this doesn't work inside the forEach loop
+			var ele = ($(this)); // assigned as variable because `this` doesn't work inside the forEach loop
 			selectedSeats.forEach(function(seat, index){
 				if($(ele).text() === seat){
 					selectedSeats.splice(index, 1);
@@ -36,10 +36,12 @@ $(document).ready(function(){
 	//Click handler for form modal
 	$("#modalLaunch").on('click', function(){
 			if(selectedSeats.length === 0){
-				$('#selectPls').css('display', 'block');
+				//logic for testing to see if any seats are selected
+				$('#selectPls').css('display', 'block'); //display error message if no seats selected
 			}
 			else {
 						$('#selectPls').css('display', 'none');
+						//populate resList paragraph with selected seats
 						var temp = "";
 						selectedSeats.forEach(function(item){
 							temp += item + " ";

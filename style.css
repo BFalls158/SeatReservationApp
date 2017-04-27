@@ -9,7 +9,7 @@ html, body {
 html{
 	height: 100%;
 	background-image: url('movieBackground0.75.png') ;
-	background-size:cover cover;
+	background-size: cover cover 100%;
 	background-repeat: no-repeat;
 	background-position: fixed;
 }
@@ -71,9 +71,10 @@ h1 {
 #screen {
 	height: 25px;
 	width:80%;
-	background-color: grey;
+	background-color: #989AAC;
 	margin: 3% auto;
   	border-radius: 3px;
+  	color: white;
 }
 
 #instructions {
