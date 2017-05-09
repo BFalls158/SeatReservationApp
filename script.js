@@ -38,8 +38,7 @@ $(document).ready(function(){
 			if(selectedSeats.length === 0){
 				//logic for testing to see if any seats are selected
 				$('#selectPls').css('display', 'block'); //display error message if no seats selected
-			}
-			else {
+			} else {
 						$('#selectPls').css('display', 'none');
 						//populate resList paragraph with selected seats
 						var temp = "";
@@ -68,6 +67,7 @@ $(document).ready(function(){
 
 
 			$('.seat').each(function(index, ele) {
+				// Sets on hover information of reserved seats
 				reservedSeats.forEach(function(reserved){
 					if (ele.innerText === reserved.seat){
 						$(ele).addClass('reserved').removeClass('selected');
@@ -89,7 +89,7 @@ $(document).ready(function(){
 
 			$("#myModal").modal('hide');
 			$("#modal2").modal('show');
-		}
+		};
 		// show other modal, dismiss modal on click
 	});
 });//end of doc.ready func
